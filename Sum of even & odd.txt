@@ -1,0 +1,23 @@
+/*Write a program to input an integer N and print the sum of all its even digits and sum of all its odd digits separately..*/
+		
+#include<iostream>
+
+using namespace std;
+int main(){
+	int n,sumofeven=0,sumofodd=0;
+	cout<<"Enter n";
+	cin>>n;
+	
+	
+	while(n>0){
+		int lastdigit=n%10;
+		if(lastdigit%2==0){
+			sumofeven=sumofeven+lastdigit;
+		}
+		else{
+			sumofodd=sumofodd+lastdigit;
+		}
+		n=n/10;
+	}
+	cout<<sumofeven<<" "<<sumofodd;
+}
